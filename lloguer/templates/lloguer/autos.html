@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todos los Automóviles</title>
+  </head>
+  <body>
+    <h1>Lista de Todos los Automóviles</h1>
+
+    {% if automoviles %}
+    <table border="1">
+      <tr>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Matrícula</th>
+      </tr>
+
+      {% for automovil in automoviles %}
+      <tr>
+        <td>{{ automovil.marca }}</td>
+        <td>{{ automovil.model }}</td>
+        <td>{{ automovil.matricula }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% else %}
+    <p>No hay automóviles disponibles.</p>
+    {% endif %}
+  </body>
+</html>
